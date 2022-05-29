@@ -53,6 +53,24 @@ M.base_16 = {
    base0F = "#be5046",
 }
 
+M.polish_hl = {
+   DiffAdd = {
+      bg = "#012800",
+   },
+   DiffChange = {
+     bg = "#082040",
+   },
+   DiffModified = {
+     bg = "#340001",
+   },
+   TSOperator = {
+     fg = "#66C1F8",
+   },
+   InlayHint = {
+     fg = "#1070A0",
+   }
+}
+
 M.type = "dark"
 
 return M
