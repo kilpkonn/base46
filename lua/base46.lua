@@ -1,7 +1,5 @@
 local M = {}
 
-local config = require("core.utils").load_config()
-
 M.get_theme_tb = function(name, type)
    local default_path = "hl_themes." .. name
    local user_path = "custom.themes." .. name
@@ -50,45 +48,6 @@ M.load_theme = function()
    require("plenary.reload").reload_module "chadlights"
 
    require "chadlights"
-end
-
-M.override_theme = function(default_theme, theme_name)
-   local changed_themes = config.ui.changed_themes
-
-   if changed_themes[theme_name] then
-      return M.merge_tb(default_theme, changed_themes[theme_name])
-   else
-      return default_theme
-   end
-end
-
-M.toggle_theme = function()
-   local themes = config.ui.theme_toggle
-
-   local theme1 = themes[1]
-   local theme2 = themes[2]
-
-   if vim.g.nvchad_theme == theme1 or vim.g.nvchad_theme == theme2 then
-      if vim.g.toggle_theme_icon == "   " then
-         vim.g.toggle_theme_icon = "   "
-      else
-         vim.g.toggle_theme_icon = "   "
-      end
-   end
-
-   if vim.g.nvchad_theme == theme1 then
-      vim.g.nvchad_theme = theme2
-
-      require("nvchad").reload_theme()
-      require("nvchad").change_theme(theme1, theme2)
-   elseif vim.g.nvchad_theme == theme2 then
-      vim.g.nvchad_theme = theme1
-
-      require("nvchad").reload_theme()
-      require("nvchad").change_theme(theme2, theme1)
-   else
-      vim.notify "Set your current theme to one of those mentioned in the theme_toggle table (chadrc)"
-   end
 end
 
 return M

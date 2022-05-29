@@ -92,6 +92,5 @@ M.polish_hl = {
       fg = "#4e565c",
    },
 }
-M = require("base46").override_theme(M, "everforest_light")
 
 return M

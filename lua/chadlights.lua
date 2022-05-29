@@ -21,8 +21,7 @@ if polish_hl then
    highlights = merge_tb(highlights, polish_hl)
 end
 
--- local set_transparent = require("core.utils").load_config().ui.transparency
-if ui.transparency then
+if vim.g.chad_transparency then
    highlights = merge_tb(highlights, require "nv_glassy")
 end
 
