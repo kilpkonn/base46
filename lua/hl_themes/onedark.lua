@@ -68,6 +68,9 @@ M.polish_hl = {
    },
    InlayHint = {
      fg = "#1070A0",
+   },
+   DiffText = {
+     fg = "NONE", bg = "NONE"
    }
 }
 
