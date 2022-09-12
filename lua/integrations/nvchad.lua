@@ -104,8 +104,8 @@ return {
       fg = black,
       bg = white,
    },
-   MatchParen = { link = "MatchWord" },
+   MatchParen = { fg = yellow },
 
    MatchWordCur = { },
-   MatchParenCur = { link = "MatchWordCur" },
+   MatchParenCur = { link = "MatchParen" },
 }
