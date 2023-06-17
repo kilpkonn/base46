@@ -14,7 +14,7 @@ local defaults = {
   PmenuSel = { bg = colors.pmenu_bg, fg = colors.black },
   PmenuThumb = { bg = colors.grey },
 
-  MatchParen = { link = "MatchWord" },
+  MatchParen = { fg = colors.yellow },
 
   Comment = { fg = colors.grey_fg },
 
@@ -245,7 +245,4 @@ local defaults = {
 local merge_tb = require("base46").merge_tb
 defaults = merge_tb(defaults, require("base46").load_highlight "statusline")
 
-local hexify_ColorStrs = require("base46").turn_str_to_color
-local user_new_highlights = require("core.utils").load_config().ui.hl_add
-
-return merge_tb(defaults, hexify_ColorStrs(user_new_highlights))
+return defaults

@@ -57,6 +57,27 @@ M.base_16 = {
 
 M.type = "dark"
 
+M.polish_hl = {
+   DiffAdd = {
+      bg = "#012800",
+   },
+   DiffChange = {
+     bg = "#082040",
+   },
+   DiffModified = {
+     bg = "#340001",
+   },
+   TSOperator = {
+     fg = "#66C1F8",
+   },
+   InlayHint = {
+     fg = "#1070A0",
+   },
+   DiffText = {
+     fg = "NONE", bg = "NONE"
+   }
+}
+
 M = require("base46").override_theme(M, "onedark")
 
 return M

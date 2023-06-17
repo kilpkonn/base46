@@ -43,13 +43,11 @@ local item_kinds = {
   CmpItemKindCopilot = { fg = colors.green },
 }
 
-local cmp_ui = require("core.utils").load_config().ui.cmp
-
 -- custom highlights per style!
 local styles = {
 
   default = {
-    CmpBorder = { fg = colors[cmp_ui.border_color] },
+    CmpBorder = { fg = colors["grey_fg"] },
   },
 
   atom = {
@@ -95,7 +93,7 @@ local styles = {
 local generate_color = require("base46.colors").change_hex_lightness
 
 -- override item_kind highlights for atom style
-if cmp_ui.style == "atom" then
+if false then
   for key, value in pairs(item_kinds) do
     item_kinds[key] = vim.tbl_deep_extend(
       "force",
@@ -106,16 +104,16 @@ if cmp_ui.style == "atom" then
 end
 
 -- override item_kind highlights for atom_colored style
-if cmp_ui.style == "atom_colored" then
+if false then
   for key, value in pairs(item_kinds) do
     item_kinds[key] = { fg = colors.black, bg = generate_color(value.fg, -3), bold = true }
   end
 end
 
-highlights = vim.tbl_deep_extend("force", highlights, styles[cmp_ui.style] or {})
+highlights = vim.tbl_deep_extend("force", highlights, styles["default"] or {})
 highlights = vim.tbl_deep_extend("force", highlights, item_kinds)
 
-if cmp_ui.selected_item_bg == "simple" then
+if true then
   highlights.CmpSel =
     { fg = colors.white, bg = (highlights.CmpPmenu.bg == colors.black2 and colors.grey or colors.one_bg3), bold = true }
 end
