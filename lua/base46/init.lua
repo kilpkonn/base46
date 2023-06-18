@@ -3,8 +3,7 @@ local g = vim.g
 local base46_path = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h")
 
 M.get_theme_tb = function(type)
-  local default_path = "base46.themes." .. g.nvchad_theme
-  local default_theme = require(default_path)
+  local default_theme = require("base46.themes." .. g.nvchad_theme)
   return default_theme[type]
 end
 
@@ -39,6 +38,8 @@ M.extend_default_hl = function(highlights)
     for key, value in pairs(polish_hl) do
       if highlights[key] then
         highlights[key] = M.merge_tb(highlights[key], value)
+      else
+        highlights[key] = value
       end
     end
   end
