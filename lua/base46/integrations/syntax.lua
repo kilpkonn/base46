@@ -119,18 +119,18 @@ local merge_tb = require("base46").merge_tb
 
 if vim.version().minor >= 9 then
   local semantic_hls = {
-    ["@lsp.type.class"] = { link = "Structure" },
+    ["@lsp.type.class"] = { link = "@type" },
     ["@lsp.type.decorator"] = { link = "Function" },
-    ["@lsp.type.enum"] = { link = "Type" },
+    ["@lsp.type.enum"] = { link = "@type" },
     ["@lsp.type.enumMember"] = { link = "Constant" },
     ["@lsp.type.function"] = { link = "@function" },
-    ["@lsp.type.interface"] = { link = "Structure" },
+    ["@lsp.type.interface"] = { link = "@type" },
     ["@lsp.type.macro"] = { link = "@macro" },
     ["@lsp.type.method"] = { link = "@method" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.parameter"] = { link = "@parameter" },
     ["@lsp.type.property"] = { link = "@property" },
-    ["@lsp.type.struct"] = { link = "Structure" },
+    ["@lsp.type.struct"] = { link = "@type" },
     ["@lsp.type.type"] = { link = "@type" },
     ["@lsp.type.typeParamater"] = { link = "TypeDef" },
     ["@lsp.type.variable"] = { link = "@variable" },

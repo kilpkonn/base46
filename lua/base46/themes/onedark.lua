@@ -63,6 +63,8 @@ M.polish_hl = {
    DiffDelete = { bg = "#340001", },
    -- DiffModified = { bg = "#340001", },
    ["@operator"] = { fg = "#66C1F8", },
+   ["@lsp.type.interface"] = { fg = "#317a1d" },
+   ["@lsp.type.typeParamater"] = { fg = "#2b00a3" },
    InlayHint = { fg = "#1070A0", },
    DiffText = { fg = "NONE", bg = "NONE" },
    TelescopeSelection = { bg = "#3e4451" },
