@@ -60,11 +60,12 @@ M.type = "dark"
 M.polish_hl = {
    DiffAdd = { bg = "#012800", },
    DiffChange = { bg = "#082040", },
-   DiffModified = { bg = "#340001", },
+   DiffDelete = { bg = "#340001", },
+   -- DiffModified = { bg = "#340001", },
    ["@operator"] = { fg = "#66C1F8", },
    InlayHint = { fg = "#1070A0", },
    DiffText = { fg = "NONE", bg = "NONE" },
-   TelescopeSelection = { bg = "#3e4451" }
+   TelescopeSelection = { bg = "#3e4451" },
 }
 
 M = require("base46").override_theme(M, "onedark")
