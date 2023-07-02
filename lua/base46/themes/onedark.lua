@@ -66,7 +66,7 @@ M.polish_hl = {
    GitSignsChange = { link = "DiffChange" },
    ["@operator"] = { fg = "#66C1F8", },
    ["@lsp.type.interface"] = { fg = "#a5d35f" },
-   ["@lsp.type.typeParameter"] = { fg = "#2b00a3", link = "" },
+   ["@lsp.type.typeParameter"] = { fg = "#6d31c6", link = "" },
    InlayHint = { fg = "#1070A0", },
    DiffText = { fg = "NONE", bg = "NONE" },
    TelescopeSelection = { bg = "#3e4451" },
