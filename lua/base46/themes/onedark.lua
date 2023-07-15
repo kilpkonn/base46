@@ -70,6 +70,11 @@ M.polish_hl = {
    InlayHint = { fg = "#1070A0", },
    DiffText = { fg = "NONE", bg = "NONE" },
    TelescopeSelection = { bg = "#3e4451" },
+   DapBreakpoint = { fg = "#CC0000" },
+   DapBreakpointCondition = { fg = "#CC0000" },
+   DapLogPoint = { fg = "#2255FF" },
+   DapStopped = { fg = "#22CC44" },
+   DapBreakpointRejected = { fg = "#CC0000" }
 }
 
 M = require("base46").override_theme(M, "onedark")
