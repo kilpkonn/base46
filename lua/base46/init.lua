@@ -66,6 +66,7 @@ M.extend_default_hl = function(highlights, integration_name)
       end
     end
   end
+  return highlights
 end
 
 M.load_integrationTB = function(name)
