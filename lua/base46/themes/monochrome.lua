@@ -56,7 +56,9 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["@punctuation.bracket"] = { fg = M.base_30.red },
+  treesitter = {
+    ["@punctuation.bracket"] = { fg = M.base_30.red },
+  },
 }
 
 M.type = "dark"

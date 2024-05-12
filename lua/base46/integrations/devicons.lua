@@ -1,7 +1,6 @@
 local colors = require("base46").get_theme_tb "base_30"
 
 return {
-  DevIconDefault = { fg = colors.red },
   DevIconc = { fg = colors.blue },
   DevIconcss = { fg = colors.blue },
   DevIcondeb = { fg = colors.cyan },
@@ -29,9 +28,10 @@ return {
   DevIconxz = { fg = colors.sun },
   DevIconzip = { fg = colors.sun },
   DevIconZig = { fg = colors.orange },
-  DevIconMd = {fg = colors.blue},
-  DevIconTSX = {fg = colors.blue},
-  DevIconJSX = {fg = colors.blue},
-  DevIconSvelte = {fg = colors.red},
-  DevIconJava = {fg = colors.orange}
+  DevIconMd = { fg = colors.blue },
+  DevIconTSX = { fg = colors.blue },
+  DevIconJSX = { fg = colors.blue },
+  DevIconSvelte = { fg = colors.red },
+  DevIconJava = { fg = colors.orange },
+  DevIconDart = { fg = colors.cyan },
 }

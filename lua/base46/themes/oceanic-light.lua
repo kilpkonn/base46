@@ -60,12 +60,19 @@ M.type = "light"
 M = require("base46").override_theme(M, "oceanic-next-light")
 
 M.polish_hl = {
-  St_NTerminalMode = { fg = M.base_30.white },
-  St_VisualMode = { bg = M.base_30.teal },
-  St_VisualModeSep = { fg = M.base_30.teal },
+  statusline = {
+    St_NTerminalMode = { fg = M.base_30.white },
+    St_VisualMode = { bg = M.base_30.teal },
+    St_VisualModeSep = { fg = M.base_30.teal },
+  },
 
-  ["@field"] = { fg = M.base_16.base0C },
-  Constant = { fg = M.base_16.base09 },
+  treesitter = {
+    ["@variable.member"] = { fg = M.base_16.base0C },
+  },
+
+  syntax = {
+    Constant = { fg = M.base_16.base09 },
+  },
 }
 
 return M

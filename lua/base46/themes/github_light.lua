@@ -19,7 +19,7 @@ M.base_30 = {
   baby_pink = "#ea4aaa",
   pink = "#b93a86",
   line = "#eaecee", -- for lines like vertsplit
-  green = "#18654B", 
+  green = "#18654B",
   vibrant_green = "#28a745",
   nord_blue = "#0366d6", -- Mode indicator
   blue = "#0D7FDD",
@@ -58,29 +58,17 @@ M.base_16 = {
 M.type = "light"
 
 M.polish_hl = {
-  ["@punctuation.bracket"] = {
-    fg = M.base_30.blue,
+  treesitter = {
+    ["@punctuation.bracket"] = { fg = M.base_30.blue },
+    ["@variable.member.key"] = { fg = M.base_30.white },
+    ["@constructor"] = { fg = M.base_30.vibrant_green },
+    ["@operator"] = { fg = M.base_30.orange },
   },
 
-  ["@field.key"] = {
-    fg = M.base_30.white,
+  syntax = {
+    Constant = { fg = M.base_16.base07 },
+    Tag = { fg = M.base_30.vibrant_green },
   },
-
-  Constant = {
-    fg = M.base_16.base07,
-  },
-
-  ["@constructor"] = {
-    fg = M.base_30.vibrant_green,
-  },
-
-  Tag = {
-    fg = M.base_30.vibrant_green,
-  },
-
-  ["@operator"] = {
-    fg = M.base_30.orange
-  }
 }
 
 M = require("base46").override_theme(M, "github_light")

@@ -57,15 +57,20 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["@field"] = { fg = M.base_30.purple },
-  ["@variable"] = { fg = M.base_16.base06 },
-  ["@module"] = { fg = M.base_30.beige },
-  Operator = { fg = M.base_30.blue },
-  ["@attribute"] = { fg = M.base_30.cyan },
-  ["@punctuation.bracket"] = { fg = M.base_16.base06 },
-  ["@parenthesis"] = { link = "@punctuation.bracket" },
-  ["@parameter"] = { fg = M.base_30.green },
-  ["@function.builtin"] = { fg = M.base_30.yellow },
+  syntax = {
+    Operator = { fg = M.base_30.blue },
+  },
+
+  treesitter = {
+    ["@variable.member"] = { fg = M.base_30.purple },
+    ["@variable"] = { fg = M.base_16.base06 },
+    ["@module"] = { fg = M.base_30.beige },
+    ["@attribute"] = { fg = M.base_30.cyan },
+    ["@punctuation.bracket"] = { fg = M.base_16.base06 },
+    ["@parenthesis"] = { link = "@punctuation.bracket" },
+    ["@variable.parameter"] = { fg = M.base_30.green },
+    ["@function.builtin"] = { fg = M.base_30.yellow },
+  },
 }
 
 M.type = "dark"

@@ -56,18 +56,38 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  DiffAdd = { fg = M.base_30.green },
-  WhichKeyDesc = { fg = M.base_30.white },
-  WhichKey = { fg = M.base_30.white },
-  NvimTreeFolderName = { fg = "#4e565c" },
-  TbLineThemeToggleBtn = { bg = M.base_30.one_bg },
-  Pmenu = { bg = M.base_30.black2 },
-  IndentBlanklineContextStart = { bg = M.base_30.black2 },
-  St_pos_text = { fg = M.base_30.white },
-  ["@tag"] = { fg = M.base_30.orange },
-  ["@field"] = { fg = M.base_16.base05 },
-  ["@include"] = { fg = M.base_16.base08 },
-  ["@constructor"] = { fg = M.base_30.blue },
+  git = {
+    DiffAdd = { fg = M.base_30.green },
+  },
+
+  whichkey = {
+    WhichKeyDesc = { fg = M.base_30.white },
+    WhichKey = { fg = M.base_30.white },
+  },
+
+  nvimtree = {
+    NvimTreeFolderName = { fg = "#4e565c" },
+  },
+
+  tbline = {
+    TbLineThemeToggleBtn = { bg = M.base_30.one_bg },
+  },
+
+  defaults = {
+    Pmenu = { bg = M.base_30.black2 },
+  },
+  -- IndentBlanklineContextStart = { bg = M.base_30.black2 },
+
+  statusline = {
+    St_pos_text = { fg = M.base_30.white },
+  },
+
+  treesitter = {
+    ["@tag"] = { fg = M.base_30.orange },
+    ["@variable.member"] = { fg = M.base_16.base05 },
+    ["@keyword.import"] = { fg = M.base_16.base08 },
+    ["@constructor"] = { fg = M.base_30.blue },
+  },
 }
 
 M.type = "light"

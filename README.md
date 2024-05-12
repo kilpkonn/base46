@@ -1,64 +1,165 @@
 ## NvChad theme plugin
 
 - This plugin's a whole re-write of Norcalli's plugin.
- 
-(Note: This theme plugin is supposed to be used along with [NvChad](https://github.com/NvChad/NvChad) only so watchout!)
+- It should be used along with [NvChad](https://github.com/NvChad/NvChad) for best experience.
+- Non NvChad users can have the nvconfig module on the path
 
-## Contribute for new themes 
+## Supported Integrations
 
-- go to base46/themes and add your file, ex: atheme.lua
+- Bufferline.nvim
+- Cmp.nvim
+- Codeactionmenu
+- Nvim-dap
+- Nvim-webdevicons
+- Hop.nvim
+- Vim-illuminate
+- Lsp ( diagnostics )
+- Nvim Navic
+- LspSaga
+- Mason.nvim
+- Notify.nvim
+- Nvim-tree
+- Telescope.nvim
+- Rainbow-delimiters.nvim
+- Todo.nvim
+- Nvim-treesitter
+- Lsp Semantic tokens
+- Trouble.nvim 
+- Whichkey.nvim
+
+## Configuration
+
+- Base46 is configured by [nvconfig](https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua) in your path. 
+- Read the [themeing docs](https://nvchad.com/docs/config/theming)
+
+## Highlight command
+
+- `:hi` command will list all highlight groups
+- `:hi` with args will highlight a **highlight group**
+-  Example : `hi Comment guifg=#ffffff gui=italic, bold`
+
+### Neovim Lua api for setting highlights
+
+- Check `:h nvim_set_hl` for detailed doc
+
 ```lua
--- atheme.lua file be like 
+vim.api.nvim_set_hl(0, "Comment", {
+  fg = "#ffffff",
+  italic = true,
+  bold = true,
+})
+```
+## Understanding theme variables
 
+There are 2 main tables used for `base46`
+
+- `base_30` is used for general UI 
+- `base_16` is used for syntax highlighting 
+- Use a color lightening/darkening tool, such as this
+  https://imagecolorpicker.com/color-code
+
+**Note: the below values are mostly approx values so its not compulsory that you
+have to use those exact numbers, test your theme i.e show it in the PR to get
+feedback from @siduck**
+
+## Default Theme table
+
+```lua
+-- this line for types, by hovering and autocompletion (lsp required)
+-- will help you understanding properties, fields, and what highlightings the color used for
+---@type Base46Table
 local M = {}
-
+-- UI
 M.base_30 = {
-  -- some colors 
+  white = "",
+  black = "", -- usually your theme bg
+  darker_black = "", -- 6% darker than black
+  black2 = "", -- 6% lighter than black
+  one_bg = "", -- 10% lighter than black
+  one_bg2 = "", -- 6% lighter than one_bg2
+  one_bg3 = "", -- 6% lighter than one_bg3
+  grey = "", -- 40% lighter than black (the % here depends so choose the perfect grey!)
+  grey_fg = "", -- 10% lighter than grey
+  grey_fg2 = "", -- 5% lighter than grey
+  light_grey = "",
+  red = "",
+  baby_pink = "",
+  pink = "",
+  line = "", -- 15% lighter than black
+  green = "",
+  vibrant_green = "",
+  nord_blue = "",
+  blue = "",
+  seablue = "",
+  yellow = "", -- 8% lighter than yellow
+  sun = "",
+  purple = "",
+  dark_purple = "",
+  teal = "",
+  orange = "",
+  cyan = "",
+  statusline_bg = "",
+  lightbg = "",
+  pmenu_bg = "",
+  folder_bg = ""
 }
 
+-- check https://github.com/chriskempson/base16/blob/master/styling.md for more info
 M.base_16 = {
-  -- some colors 
+  base00 = "",
+  base01 = "",
+  base02 = "",
+  base03 = "",
+  base04 = "",
+  base05 = "",
+  base06 = "",
+  base07 = "",
+  base08 = "",
+  base09 = "",
+  base0A = "",
+  base0B = "",
+  base0C = "",
+  base0D = "",
+  base0E = "",
+  base0F = ""
 }
 
-M.type = "dark" -- this can be either dark or light
+-- OPTIONAL
+-- overriding or adding highlights for this specific theme only 
+-- defaults/treesitter is the filename i.e integration there, 
 
-M = require("base46").override_theme(M, "atheme")
+M.polish_hl = {
+  defaults = {
+    Comment = {
+      bg = "#ffffff", -- or M.base_30.cyan
+      italic = true,
+    },
+  },
+
+  treesitter = {
+    ["@variable"] = { fg = "#000000" },
+  },
+}
+
+-- set the theme type whether is dark or light
+M.type = "dark" -- "or light"
+
+-- this will be later used for users to override your theme table from chadrc
+M = require("base46").override_theme(M, "abc")
 
 return M
 ```
 
-## Understanding theme variables 
+## Contribute
 
-- Read the following for base_16 variables https://github.com/chriskempson/base16/blob/master/styling.md
+- Send PR in the https://github.com/NvChad/base46/tree/v2.5/lua/base46/themes
 
-- Use a color lightening/darkening tool, such as this https://siduck.github.io/hex-tools/
-- The following variables are for base_30 
+### Testing your theme
 
-```
-black = usually your theme bg 
-darker_black = 6% darker than black
-black2 = 6% lighter than black
+- Just place your theme file in your `/lua/themes` folder
+- And select the theme with theme switcher or change in chadrc
 
-onebg = 10% lighter than black
-oneb2 = 19% lighter than black
-oneb3 = 27% lighter than black
+## Tips
 
-grey = 40% lighter than black (the % here depends so choose the perfect grey!)
-grey_fg = 10% lighter than grey
-grey_fg2 = 20% lighter than grey
-light_grey = 28% lighter than grey
-
-baby_pink = 15% lighter than red or any babypink color you like!
-line = 15% lighter than black 
-
-nord_blue = 13% darker than blue 
-sun = 8% lighter than yellow
-
-statusline_bg = 4% lighter than black
-lightbg = 13% lighter than statusline_bg
-lightbg2 = 7% lighter than statusline_bg
-
-folder_bg = blue color
-
-(note : the above values are mostly approx values so its not compulsory that you have to use those exact numbers , test your theme i.e show it in the PR to get feedback from @siduck)
-```
+- Capture what highlight are used under the cursor by running the `:Inspect` or
+  `:InspectTree` commands

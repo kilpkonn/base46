@@ -58,44 +58,21 @@ M.base_16 = {
 M.type = "dark"
 
 M.polish_hl = {
-  Constant = {
-    fg = M.base_30.orange,
+
+  treesitter = {
+    ["@constructor"] = { fg = M.base_30.cyan },
+    ["@keyword"] = { fg = M.base_30.red },
+    ["@function.method.call"] = { fg = M.base_30.cyan },
+    ["@function.call"] = { fg = M.base_30.cyan },
+    ["@function.builtin"] = { fg = M.base_30.orange },
   },
 
-  ["@constructor"] = {
-    fg = M.base_30.cyan,
-  },
-
-  ["@keyword"] = {
-    fg = M.base_30.red,
-  },
-
-  ["@method.call"] = {
-    fg = M.base_30.cyan,
-  },
-
-  ["@function.call"] = {
-    fg = M.base_30.cyan,
-  },
-
-  ["@function.builtin"] = {
-    fg = M.base_30.orange,
-  },
-
-  Conditional = {
-    fg = M.base_30.baby_pink,
-  },
-
-  Repeat = {
-    fg = M.base_30.baby_pink,
-  },
-
-  Type = {
-    fg = M.base_30.baby_pink,
-  },
-
-  Operator = {
-    fg = M.base_30.baby_pink,
+  syntax = {
+    Constant = { fg = M.base_30.orange },
+    Conditional = { fg = M.base_30.baby_pink },
+    Repeat = { fg = M.base_30.baby_pink },
+    Type = { fg = M.base_30.baby_pink },
+    Operator = { fg = M.base_30.baby_pink },
   },
 }
 

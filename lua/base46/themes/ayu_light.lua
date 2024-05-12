@@ -56,15 +56,17 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  luaTSField = { fg = M.base_16.base0E },
-  PmenuSel = { fg = M.base_30.white, bg = M.base_30.pmenu_bg },
-  ["@tag.delimiter"] = { fg = M.base_30.base0D },
-  ["@parameter"] = { fg = M.base_16.base09 },
-  ["@constructor"] = { fg = M.base_16.base0C },
-  ["@tag.attribute"] = { fg = M.base_30.base0F },
+  treesitter = {
+    luaTSField = { fg = M.base_16.base0E },
+    PmenuSel = { fg = M.base_30.white, bg = M.base_30.pmenu_bg },
+    ["@tag.delimiter"] = { fg = M.base_30.base0D },
+    ["@variable.parameter"] = { fg = M.base_16.base09 },
+    ["@constructor"] = { fg = M.base_16.base0C },
+    ["@tag.attribute"] = { fg = M.base_30.base0F },
+  },
 }
 
-M = require("base46").override_theme(M, "ayu-light")
+M = require("base46").override_theme(M, "ayu_light")
 
 M.type = "light"
 

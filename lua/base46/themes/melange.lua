@@ -59,24 +59,19 @@ M.base_16 = {
 M.type = "dark"
 
 M.polish_hl = {
-  ["@field"] = { fg = M.base_30.white },
-  ["@field.key"] = { fg = M.base_30.white },
-
-  ["@function.macro"] = {
-    fg = M.base_30.vibrant_green,
+  treesitter = {
+    ["@variable.member"] = { fg = M.base_30.white },
+    ["@variable.member.key"] = { fg = M.base_30.white },
+    ["@function.macro"] = {
+      fg = M.base_30.vibrant_green,
+    },
   },
 
-  Include = {
-    fg = M.base_30.vibrant_green,
+  syntax = {
+    Include = { fg = M.base_30.vibrant_green },
+    Operator = { fg = M.base_30.firered },
+    Boolean = { fg = M.base_30.purple },
   },
-
-  Operator = {
-    fg = M.base_30.firered,
-  },
-
-  Boolean = {
-    fg = M.base_30.purple
-  }
 }
 
 M = require("base46").override_theme(M, "melange")

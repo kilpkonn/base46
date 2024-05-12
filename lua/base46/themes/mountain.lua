@@ -56,7 +56,9 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["@variable"] = { fg = M.base_16.base05 },
+  treesitter = {
+    ["@variable"] = { fg = M.base_16.base05 },
+  },
 }
 
 M.type = "dark"

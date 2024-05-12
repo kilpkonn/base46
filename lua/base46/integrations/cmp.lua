@@ -41,13 +41,15 @@ local item_kinds = {
   CmpItemKindOperator = { fg = base16.base05 },
   CmpItemKindTypeParameter = { fg = base16.base08 },
   CmpItemKindCopilot = { fg = colors.green },
+  CmpItemKindCodeium = { fg = colors.vibrant_green },
+  CmpItemKindTabNine = { fg = colors.baby_pink },
 }
 
 -- custom highlights per style!
 local styles = {
 
   default = {
-    CmpBorder = { fg = colors["grey_fg"] },
+    CmpBorder = { fg = colors.grey_fg },
   },
 
   atom = {

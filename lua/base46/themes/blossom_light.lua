@@ -56,16 +56,22 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  WhichKeyDesc = { fg = M.base_30.white },
-  WhichKey = { fg = M.base_30.white },
-
-  TbLineThemeToggleBtn = {
-    fg = M.base_30.black,
-    bg = M.base_30.white,
+  whichkey = {
+    WhichKeyDesc = { fg = M.base_30.white },
+    WhichKey = { fg = M.base_30.white },
   },
 
-  IndentBlanklineContextStart = { bg = M.base_30.black2 },
-  St_pos_text = { fg = M.base_30.white },
+  tbline = {
+    TbLineThemeToggleBtn = {
+      fg = M.base_30.black,
+      bg = M.base_30.white,
+    },
+  },
+
+  -- IndentBlanklineContextStart = { bg = M.base_30.black2 },
+  statusline = {
+    St_pos_text = { fg = M.base_30.white },
+  },
 }
 
 M.type = "light"

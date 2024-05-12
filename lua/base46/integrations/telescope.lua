@@ -23,6 +23,8 @@ local hlgroups = {
   TelescopeResultsDiffAdd = { fg = colors.green },
   TelescopeResultsDiffChange = { fg = colors.yellow },
   TelescopeResultsDiffDelete = { fg = colors.red },
+
+  TelescopeMatching = { bg = colors.one_bg, fg = colors.blue },
 }
 
 local styles = {

@@ -50,7 +50,7 @@ return {
   },
 
   gitcommitSummary = {
-    fg = theme.base08,
+    fg = theme.base0B,
   },
 
   gitcommitComment = {

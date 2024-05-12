@@ -56,8 +56,8 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["@constant"] = {
-    fg = M.base_30.yellow,
+  treesitter = {
+    ["@constant"] = { fg = M.base_30.yellow },
   },
 }
 

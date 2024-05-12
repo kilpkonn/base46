@@ -56,36 +56,18 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["@field.key"] = {
-    fg = M.base_30.red,
+  treesitter = {
+    ["@variable.member.key"] = { fg = M.base_30.red },
+    ["@punctuation.bracket"] = { fg = M.base_16.base08 },
+    ["@constructor"] = { fg = M.base_30.orange },
+    ["@variable.parameter"] = { fg = M.base_30.orange },
+    ["@tag.delimiter"] = { fg = M.base_16.base08 },
+    ["@tag.attribute"] = { link = "@annotation" },
   },
 
-  Constant = {
-    fg = M.base_30.red,
-  },
-
-  ["@punctuation.bracket"] = {
-    fg = M.base_16.base08,
-  },
-
-  ["@constructor"] = {
-    fg = M.base_30.orange,
-  },
-
-  ["@parameter"] = {
-    fg = M.base_30.orange,
-  },
-
-  Operator = {
-    fg = M.base_30.cyan,
-  },
-
-  ["@tag.delimiter"] = {
-    fg = M.base_16.base08,
-  },
-
-  ["@tag.attribute"] = {
-    link = "@annotation",
+  syntax = {
+    Operator = { fg = M.base_30.cyan },
+    Constant = { fg = M.base_30.red },
   },
 }
 

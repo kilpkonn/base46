@@ -33,6 +33,8 @@ local defaults = {
     bg = theme.base00,
   },
 
+  DevIconDefault = { fg = colors.red },
+
   Bold = {
     bold = true,
   },
@@ -65,8 +67,8 @@ local defaults = {
   },
 
   Folded = {
-    fg = theme.base03,
-    bg = theme.base01,
+    fg = colors.light_grey,
+    bg = colors.black2,
   },
 
   IncSearch = {
@@ -158,8 +160,7 @@ local defaults = {
   },
 
   ColorColumn = {
-    bg = theme.base01,
-    sp = "none",
+    bg = colors.black2,
   },
 
   CursorColumn = {
@@ -168,8 +169,7 @@ local defaults = {
   },
 
   CursorLine = {
-    bg = "none",
-    sp = "none",
+    bg = colors.black2,
   },
 
   QuickFixLine = {
@@ -243,6 +243,5 @@ local defaults = {
 
 -- merge statusilne & hl_add tables!
 local merge_tb = require("base46").merge_tb
-defaults = merge_tb(defaults, require("base46").load_highlight "statusline")
 
 return defaults

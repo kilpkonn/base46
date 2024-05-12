@@ -56,13 +56,18 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  ["parameter"] = { fg = M.base_30.blue },
-  ["@field.key"] = { fg = M.base_30.white },
-  ["@string"] = { fg = M.base_30.sun },
-  ["@boolean"] = { fg = M.base_16.base09 },
-  ["@punctuation.bracket"] = { fg = M.base_30.sun },
-  Operator = { fg = M.base_30.red },
-  ["@operator"] = { fg = M.base_30.red },
+  treesitter = {
+    ["parameter"] = { fg = M.base_30.blue },
+    ["@variable.member.key"] = { fg = M.base_30.white },
+    ["@string"] = { fg = M.base_30.sun },
+    ["@boolean"] = { fg = M.base_16.base09 },
+    ["@punctuation.bracket"] = { fg = M.base_30.sun },
+    ["@operator"] = { fg = M.base_30.red },
+  },
+
+  syntax = {
+    Operator = { fg = M.base_30.red },
+  },
 }
 
 M.type = "dark"

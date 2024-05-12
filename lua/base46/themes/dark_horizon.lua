@@ -1,5 +1,5 @@
--- Credits to original theme https://github.com/michael-ball/base16-horizon-scheme 
--- This is a modified version 
+-- Credits to original theme https://github.com/michael-ball/base16-horizon-scheme
+-- This is a modified version
 
 local M = {}
 
@@ -57,11 +57,16 @@ M.base_16 = {
 }
 
 M.polish_hl = {
-  Include = { fg = M.base_16.base0E, bold = true },
-  ["@property"] = { fg = M.base_16.base0E },
-  ["@tag.delimiter"] = { fg = M.base_16.base05 },
-  ["@punctuation.bracket"] = { fg = M.base_30.yellow },
-  ["@punctuation.delimiter"] = { fg = M.base_30.yellow },
+  syntax = {
+    Include = { fg = M.base_16.base0E, bold = true },
+  },
+
+  treesitter = {
+    ["@property"] = { fg = M.base_16.base0E },
+    ["@tag.delimiter"] = { fg = M.base_16.base05 },
+    ["@punctuation.bracket"] = { fg = M.base_30.yellow },
+    ["@punctuation.delimiter"] = { fg = M.base_30.yellow },
+  },
 }
 
 M.type = "dark"
