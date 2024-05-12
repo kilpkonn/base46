@@ -1,6 +1,8 @@
 local M = {}
 local g = vim.g
 
+local base46_path = vim.fn.fnamemodify(debug.getinfo(1, "S").source:sub(2), ":p:h")
+
 local integrations = {
   "blankline",
   "cmp",
@@ -61,17 +63,6 @@ M.extend_default_hl = function(highlights, integration_name)
         highlights[key] = M.merge_tb(highlights[key], value)
       else
         highlights[key] = value
-      end
-    end
-  end
-
-  -- transparency
-  if config.ui.transparency then
-    local glassy = require "base46.glassy"
-
-    for key, value in pairs(glassy) do
-      if highlights[key] then
-        highlights[key] = M.merge_tb(highlights[key], value)
       end
     end
   end
