@@ -1,7 +1,5 @@
 local colors = require("base46").get_theme_tb "base_30"
 
-local config = require("nvconfig").ui
-
 local highlights = {
 
   TbFill = {
@@ -85,10 +83,5 @@ local hlgroups_glassy = {
   "TbBufOffModified",
 }
 
-if config.transparency then
-  for _, val in ipairs(hlgroups_glassy) do
-    highlights[val].bg = "NONE"
-  end
-end
 
 return highlights
