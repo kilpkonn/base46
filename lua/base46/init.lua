@@ -121,7 +121,7 @@ M.compile = function()
     -- skip caching some files
     if file ~= "statusline" or file ~= "treesitter" then
       local filename = vim.fn.fnamemodify(file, ":r")
-      M.saveStr_to_cache(filename, M.load_highlight(filename))
+      M.saveStr_to_cache(filename, M.load_integrationTB(filename))
     end
   end
 end
