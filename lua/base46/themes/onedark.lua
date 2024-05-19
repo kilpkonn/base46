@@ -67,7 +67,7 @@ M.polish_hl = {
    ["@operator"] = { fg = "#66C1F8", },
    ["@lsp.type.interface"] = { fg = "#a5d35f" },
    ["@lsp.type.typeParameter"] = { fg = "#6d31c6", link = "" },
-   InlayHint = { fg = "#1070A0", },
+   LspInlayHint = { fg = "#1070A0", },
    DiffText = { fg = "NONE", bg = "NONE" },
    TelescopeSelection = { bg = "#3e4451" },
    DapBreakpoint = { fg = "#CC0000" },
