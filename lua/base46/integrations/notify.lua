@@ -9,7 +9,6 @@ return {
   NotifyWARNTitle = { fg = colors.orange },
   NotifyINFOBorder = { fg = colors.green },
   NotifyINFOIcon = { fg = colors.green },
-  NotifyINFOTitle = { fg = colors.green },
   NotifyDEBUGBorder = { fg = colors.grey },
   NotifyDEBUGIcon = { fg = colors.grey },
   NotifyDEBUGTitle = { fg = colors.grey },
